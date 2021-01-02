@@ -4,7 +4,7 @@
 
 use strict
 
-// This is a base-level Azure Mobile App SDK.sil
+// This is a base-level Azure Mobile App SDK
 var express = require('express'),
     azureMobileApps = require('azure-mobile-apps');
 
