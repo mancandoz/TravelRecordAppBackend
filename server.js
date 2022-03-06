@@ -1,8 +1,8 @@
 var express = require('express'),
     azureMobileApps = require('azure-mobile-apps');
 
-var app1 = express(),
-    mobile1 = azureMobileApps();
+var app = express(),
+    mobile = azureMobileApps();
 
 /*
 
