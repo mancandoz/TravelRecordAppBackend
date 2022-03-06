@@ -27,7 +27,7 @@ Erim bu yorumu sil
 */
 // Import the files from the tables directory to configure the /tables endpoint
 
-/ erim bu da silinecek mobile.tables.import('./tables');
+//erim bu da silinecek mobile.tables.import('./tables');
 
 // Import the files from the api directory to configure the /api endpoint
 //! Un-comment if api folder exists
