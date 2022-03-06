@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Copyright (c) 2015 Microsoft Corporation. All rights reserved.
 // ----------------------------------------------------------------------------
-
+/*
 use strict
 
 
@@ -38,3 +38,4 @@ mobile.tables.initialize()
         app.use(mobile);    // Register the Azure Mobile Apps middleware
         app.listen(process.env.PORT || 3000);   // Listen for requests
     });
+*/
