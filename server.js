@@ -9,6 +9,12 @@ mobileApp.tables.add('Post'); // Create a table for 'Post' with default settings
 mobileApp.tables.add('Users');
 app.use(mobileApp);
 
-app.listen(process.env.PORT || 3000);
+mobile.tables.import('./tables');
+
+mobile.tables.initialize()
+    .then(function () {
+        app.use(mobile);    // Register the Azure Mobile Apps middleware
+        app.listen(process.env.PORT || 3000);   // Listen for requests
+    });
 
 
