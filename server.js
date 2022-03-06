@@ -1,17 +1,11 @@
-var express = require('express'),
-    azureMobileApps = require('azure-mobile-apps');
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 3000
 
-var app = express(),
-    mobile = azureMobileApps();
+app.get('/', function (req, res) {
+res.send('Hello World!')
+})
 
-// Define the database schema that is exposed.
-mobile.tables.import('./tables');
-
-// Provide initialization of any tables that are statically defined.
-mobile.tables.initialize().then(function () {
-    // Add the Mobile API so it is accessible as a Web API.
-    app.use(mobile);
-
-    // Start listening on HTTP.
-    app.listen(process.env.PORT || 3000);
-});
+app.listen(port, function () {
+console.log('Example app listening on port 3000!')
+})
