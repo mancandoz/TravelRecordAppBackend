@@ -6,3 +6,6 @@ var app = express(),
 
 // Define the database schema that is exposed.
 mobile.tables.import('./tables');
+
+mobile.tables.add('Post'); // Create a table for 'Post' with default settings sds
+mobile.tables.add('Users')
