@@ -1,6 +1,8 @@
+var app = require('express')(); // Create an instance of an Express app
 
-var express = require('express'),
-    azureMobileApps = require('azure-mobile-apps');
+var mobileApp = require('azure-mobile-apps')(); // Create an instance of a Mobile App with default settings
 
-var app = express(),
-    mobile = azureMobileApps();
+mobileApp.tables.add('Book'); // Create a table for 'Book' with default settings
+
+app.use(mobileApp);
+app.listen(process.env.PORT || 3000);
