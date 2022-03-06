@@ -2,7 +2,7 @@
 // Copyright (c) 2015 Microsoft Corporation. All rights reserved.
 // ----------------------------------------------------------------------------
 
-// use strict
+ use strict
 
 // This is a base-level Azure Mobile App SDK
 var express = require('express'),
