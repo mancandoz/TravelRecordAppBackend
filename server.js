@@ -2,6 +2,7 @@ var express = require('express'),
     azureMobileApps = require('azure-mobile-apps');
 
 
+/*
 var app = express(),
     mobileApp = azureMobileApps();
 
@@ -17,4 +18,4 @@ mobile.tables.initialize()
         app.listen(process.env.PORT || 3000);   // Listen for requests
     });
 
-
+*/
