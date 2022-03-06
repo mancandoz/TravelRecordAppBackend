@@ -1,4 +1,9 @@
-var table = module.exports = require('azure-mobile-apps').table();
+//var table = module.exports = require('azure-mobile-apps').table();
+
+
+var azureMobileApps = require('azure-mobile-apps');
+
+var table = azureMobileApps.table();
 
 table.columns = {
     "text": "string",
