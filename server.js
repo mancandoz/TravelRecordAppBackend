@@ -1,8 +1,17 @@
-var app = require('express')(); // Create an instance of an Express app
+var express = require('express'),
+    azureMobileApps = require('azure-mobile-apps');
 
-var mobileApp = require('azure-mobile-apps')(); // Create an instance of a Mobile App with default settings
+var app = express(),
+    mobile = azureMobileApps();
 
-mobileApp.tables.add('Post'); // Create a table for 'Post' with default settings sds
-mobileApp.tables.add('Users');
-app.use(mobileApp);
-app.listen(process.env.PORT || 3000);
+// Define the database schema that is exposed.
+mobile.tables.import('./tables');
+
+// Provide initialization of any tables that are statically defined.
+mobile.tables.initialize().then(function () {
+    // Add the Mobile API so it is accessible as a Web API.
+    app.use(mobile);
+
+    // Start listening on HTTP.
+    app.listen(process.env.PORT || 3000);
+});
