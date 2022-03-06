@@ -3,12 +3,11 @@ var express = require('express'),
 
 
 
-var app = express(),
-    mobileApp = azureMobileApps();
+mobile.tables.add('Post'); // Create a table for 'Post' with default settings sds
+mobile.tables.add('Users');
 
 /*
-mobileApp.tables.add('Post'); // Create a table for 'Post' with default settings sds
-mobileApp.tables.add('Users');
+
 app.use(mobileApp);
 
 mobile.tables.import('./tables');
