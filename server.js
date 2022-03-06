@@ -10,10 +10,5 @@ mobile.tables.import('./tables');
 mobile.tables.add('Post'); // Create a table for 'Post' with default settings sds
 mobile.tables.add('Users');
 
-mobile.tables.initialize().then(function () {
-    // Add the Mobile API so it is accessible as a Web API.
-    app.use(mobile);
-
-    // Start listening on HTTP.
-    app.listen(process.env.PORT || 3000);
-});
+app.use(mobile);
+app.listen(process.env.PORT || 3000);
